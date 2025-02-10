@@ -1,14 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { navItems } from "@/lib/config";
+import { HeroUIProvider } from "@heroui/react";
+import { Providers } from "./providers";
+import FluidCursor from "@/components/FluidCursor";
+const ubuntu = Ubuntu({
+  variable: "--font-ubuntu",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata = {
@@ -18,11 +18,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${ubuntu.variable} antialiased`}>
+        {" "}
+        <FluidCursor/>
+        <HeroUIProvider>
+          <Providers>
+            <div className="relative  w-full">
+              <FloatingNav navItems={navItems} />
+            </div>
+           
+              
+                {children}
+            
+     
+          </Providers>
+        </HeroUIProvider>
       </body>
     </html>
   );
