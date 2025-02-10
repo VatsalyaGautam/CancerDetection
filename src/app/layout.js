@@ -4,7 +4,7 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/lib/config";
 import { HeroUIProvider } from "@heroui/react";
 import { Providers } from "./providers";
-import FluidCursor from "@/components/FluidCursor";
+// import FluidCursor from "@/components/FluidCursor";
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
   subsets: ["latin"],
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${ubuntu.variable} antialiased`}>
         {" "}
-        <FluidCursor/>
+        {/* <FluidCursor/> */}
         <HeroUIProvider>
           <Providers>
             <div className="relative  w-full">

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { FileUpload } from "@/components/ui/file-upload";
+import { FileUpload } from "@/components/ui/Home/file-upload";
 
 export function FileUploadDemo() {
   const [files, setFiles] = useState([]);

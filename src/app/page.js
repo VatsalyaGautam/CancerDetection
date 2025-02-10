@@ -3,6 +3,9 @@ import { GridPattern } from "@/components/ui/grid-pattern";
 import Spline from "@splinetool/react-spline/next";
 import { cn } from "@/lib/utils";
 import AboutofHome from "@/components/Home/AboutofHome";
+import { FileUploadDemo } from "@/components/Home/FileUploadDemo";
+import Heading from "@/components/Heading";
+import { TypesOfCancers } from "@/components/Home/TypesOfCancers";
 export default function Home() {
   return (
     <>
@@ -35,7 +38,29 @@ export default function Home() {
       </div>
       <div className="bg-gradient-to-b from-white to-blue-50 font-ubuntu">
         <div className="bg-gradient-to-b from-white to-blue-50   px-5 md:max-w-5xl lg:max-w-6xl mx-auto flex flex-col ">
-          <AboutofHome />
+          <div className="pt-20 pb-16">
+            <AboutofHome />
+          </div>
+        </div>
+      </div>
+      <div className="bg-slate-50 dark:bg-black font-ubuntu">
+        <div className="bg-slate-50  dark:bg-black px-5 md:max-w-5xl lg:max-w-6xl mx-auto flex flex-col ">
+          <div className="pt-20 pb-20 flex flex-col gap-16">
+            <Heading
+              title="Ready to Take Control of Your Health?"
+              description="Our AI-driven system integrates MRI, CT, and dermoscopic imaging to detect brain, lung, skin, and bladder cancers with precision."
+              color={300}
+            />
+            <FileUploadDemo />
+          </div>
+          <div className="pt-20 pb-16 flex flex-col gap-16">
+            <Heading
+              title="Understanding Cancer Types"
+              description="Harnessing advanced AI, our system analyzes MRI, CT, and dermoscopic imaging to accurately detect brain, lung, skin, and bladder cancers—enabling early diagnosis and precision-driven care."
+              color={300}
+            />
+            <TypesOfCancers />
+          </div>
         </div>
       </div>
     </>
