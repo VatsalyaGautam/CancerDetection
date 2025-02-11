@@ -19,8 +19,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${ubuntu.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning className="overflow-x-clip">
+      <body className={`${ubuntu.variable} antialiased font-ubuntu`}>
         {" "}
         {/* <FluidCursor/> */}
         <HeroUIProvider>
@@ -28,11 +28,9 @@ export default function RootLayout({ children }) {
             <div className="relative  w-full">
               <FloatingNav navItems={navItems} />
             </div>
-           
-              
-                {children}
-            <Footer/>
-     
+
+            {children}
+            <Footer />
           </Providers>
         </HeroUIProvider>
       </body>

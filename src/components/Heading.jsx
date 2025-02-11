@@ -24,13 +24,17 @@ function Heading({ title, description, color = 500 }) {
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h2
-          className={`text-4xl sm:text-5xl p-1 font-bold bg-clip-text text-transparent mb-6 ${getBlueGradient(
+          className={`text-4xl sm:text-5xl font-ubuntu p-1 font-bold bg-clip-text text-transparent mb-6 ${getBlueGradient(
             color
           )}`}
         >
           {title}
         </h2>
-        <p className={`text-lg ${getBlueText(color)} mb-8 leading-relaxed`}>
+        <p
+          className={`text-lg ${getBlueText(
+            color
+          )} mb-8 font-ubuntu leading-relaxed`}
+        >
           {description}
         </p>
       </div>

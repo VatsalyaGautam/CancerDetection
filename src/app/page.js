@@ -1,3 +1,4 @@
+
 import { Typewriter } from "@/components/Home/Typewriter";
 import { GridPattern } from "@/components/ui/grid-pattern";
 import Spline from "@splinetool/react-spline/next";
@@ -13,10 +14,10 @@ export default function Home() {
       <div className="bg-slate-50 dark:bg-black font-ubuntu">
         <div className="bg-slate-50  dark:bg-black px-5 md:max-w-5xl lg:max-w-6xl mx-auto flex flex-col ">
           <div className="flex gap-12 mt-8">
-            <div className="w-3/5 flex justify-center">
+            <div className="w-full lg:w-3/5 flex justify-center h-[30rem]">
               <Typewriter />
             </div>
-            <div className="w-2/5 h-[30rem]">
+            <div className="hidden lg:block w-2/5 h-[30rem] ">
               <div className="w-full h-full relative flex justify-center">
                 <Spline
                   className="spline-div rounded-2xl absolute !w-[68%]"

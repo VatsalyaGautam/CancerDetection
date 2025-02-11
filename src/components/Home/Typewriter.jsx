@@ -9,8 +9,9 @@ export function Typewriter() {
         detection.
       </p>
 
-      <div className="flex items-center gap-2 text-3xl font-bold">
-        <span>Early Detection Saves</span>
+      <div className="flex flex-wrap items-center gap-2 text-3xl font-bold">
+        <span>Early</span> <span>Detection</span>
+        <span> Saves</span>
         <TypeAnimation
           sequence={[
             "Lives",
@@ -29,7 +30,7 @@ export function Typewriter() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+      <div className="flex flex-col flex-wrap md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
         <button className="w-40 h-10 rounded-xl z-[1] bg-black border dark:border-white border-transparent text-white text-sm">
           Join now
         </button>
