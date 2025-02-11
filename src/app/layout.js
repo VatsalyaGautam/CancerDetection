@@ -4,6 +4,7 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/lib/config";
 import { HeroUIProvider } from "@heroui/react";
 import { Providers } from "./providers";
+import Footer from "@/components/Footer";
 // import FluidCursor from "@/components/FluidCursor";
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
            
               
                 {children}
-            
+            <Footer/>
      
           </Providers>
         </HeroUIProvider>
